@@ -10,13 +10,13 @@ class Config(object):
     def __init__(self,dataset): #初始化就加载dataset
         self.model_name = 'virTohostBert'
         # 训练集
-        self.train_path = dataset + '/data/val.txt'
+        self.train_path = dataset + '/val.txt'
         # 验证集
-        self.dev_path = dataset + '/data/test.txt'
+        self.dev_path = dataset + '/test.txt'
         # 测试集
-        self.test_path = dataset + '/data/test.txt'
+        self.test_path = dataset + '/test.txt'
         # 类别 CNews/data/class.txt
-        self.class_list = [x.strip() for x in open(dataset + '/data/class.txt').readlines()]
+        self.class_list = [x.strip() for x in open(dataset + '/class.txt').readlines()]
         # 模型训练结果的保存位置
         self.save_path = '/kaggle/working/save_dict/' + self.model_name + '.ckpt'
         # 配置设备
